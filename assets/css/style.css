@@ -1,0 +1,314 @@
+
+/* apply document in general */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #012316;
+    --secondary-color: #ccbb70 ;
+    --tertiary-color: #60A7DE;
+}
+body {
+    color: var(--primary-color);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+section {
+    width: 80%;
+    margin: 20px auto;
+    padding: 15px 0;
+    display: grid;
+    text-align: top;
+    grid-template-columns: 1fr 3fr;
+}
+
+.section-title {
+    text-align: right;
+    padding-right: 15px;
+}
+.section-title h2 {
+    font-size: 48px;
+    color: var(--primary-color);
+}
+
+.section-content {
+    padding-left: 15px;
+    border-left: var(--primary-color) 3px solid;
+}
+
+/* apply styles to <header> */
+header {
+    padding: 10px 35px 10px 0;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+ }
+
+header h1 {
+    font-weight:bold;
+    font-size: 48px;
+    color: var(--primary-color); 
+    margin: 0;
+    padding: 5px 10px 5px 65px;
+    background: var(--secondary-color);
+}
+
+header a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+header nav {
+    margin: 7px 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li a {
+    padding: 3px 8px;
+    margin: 0 5px;
+    font-weight: lighter;
+    font-size: 1.2vw;
+    line-height: 2.0;
+    color: var(--secondary-color);
+    border-bottom: var(--secondary-color) 4px solid;
+    transition: .8s;
+}
+
+header nav ul li a:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+
+
+/* style the Hero */
+
+.hero {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-position: left;
+    height: 600px;
+    display: flex;
+    justify-content:flex-end;
+    align-items: flex-end;
+}
+
+.hero-heading {
+    text-align: center;
+    margin: 15px 50px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.hero-heading h2 {
+    font-size: 30px;
+    padding: 10px;
+    font-weight: normal;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    margin: 10px;
+
+}
+
+/* apply to Work section */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+.image-back {
+    border: var(--tertiary-color) solid 2px;
+    min-height: 105px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    height: 100%;
+}
+.image-back::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background: var(--tertiary-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    transition: opacity 0.6s;
+}
+.projects div:hover .image-back::after {
+    opacity: 0.0;
+}
+.image-back div {
+    background-color: var(--tertiary-color);
+    font-size: 11px;
+    color: #000;
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 10px;
+    z-index: 3;
+}
+.image-back div h3 {
+    font-size: 18px;
+    color: var(--primary-color);
+}
+.projects a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.project {
+    background-size: cover;
+    display: block;
+}
+.project-1 {
+    grid-column: span 2;
+    grid-row: span 2;
+    background-image: url("../images/run-buddy.jpg");
+}
+.project-2 {
+    background-image: url("../images/mosaic-press.jpg");
+}
+
+.project-3 {
+    background-image: url("../images/gobsmact.jpg");
+}
+.project-4 {
+    background-image: url("../images/imaginary.jpg");
+}
+.project-5 {
+    background-image: url("../images/nebula.jpg");
+}
+
+
+
+/* contact section */
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    text-align: left;
+
+}
+
+.contact-info div {
+    flex: 1;
+    display: inline-block;    
+}
+
+.contact-info a {
+    text-decoration: none;
+    padding: 3px 8px;
+    margin: 0 5px;
+    color: var(--primary-color);
+    border-bottom: var(--primary-color) 2px solid;
+    transition: .8s;
+}
+
+.contact-info a:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* MEDIA QUERIES */
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    /* this will be applied on any screen smaller than 980px */
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+        padding: 20px 0;
+    }
+
+    header h1 {
+        padding: 5px 20px; 
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    } 
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    .hero-heading {
+        text-align: center;
+    }
+
+    .hero {
+        justify-content:center;
+
+    }
+
+    .section-title {
+        width: 80%;
+    }
+
+ }
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+
+
+@media screen and (max-width: 768px) {
+    section {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px 0;
+        display: grid;
+        text-align: top;
+        grid-template-columns: 1fr;        
+    }
+
+    section h2 {
+        text-align: center;
+        width: 100%;
+        border-bottom: 2px solid var(--primary-color);
+        margin: 0;
+    } 
+    
+    .section-title {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .hero {
+        height: 250px;
+    }
+    
+    .section-content {
+        border: 0;
+        padding: 15px 0;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    
+    }
+    .contact-info div{
+        text-align: center;
+
+    }
+}
