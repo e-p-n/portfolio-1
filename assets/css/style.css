@@ -1,5 +1,5 @@
 
-/* apply document in general */
+/* START style for overall document */
 
 * {
     margin: 0;
@@ -29,7 +29,7 @@ section {
     padding-right: 15px;
 }
 .section-title h2 {
-    font-size: 48px;
+    font-size: 38px;
     color: var(--primary-color);
 }
 
@@ -37,8 +37,15 @@ section {
     padding-left: 15px;
     border-left: var(--primary-color) 3px solid;
 }
+.section-content p {
+    margin-bottom: 12px;
+}
 
-/* apply styles to <header> */
+/* END style for overall document */
+
+
+/*  START styles for header */
+
 header {
     padding: 10px 35px 10px 0;
     background-color: var(--primary-color);
@@ -81,10 +88,10 @@ header nav ul li a {
     padding: 3px 8px;
     margin: 0 5px;
     font-weight: lighter;
-    font-size: 1.2vw;
+    font-size: 20px;
     line-height: 2.0;
     color: var(--secondary-color);
-    border-bottom: var(--secondary-color) 4px solid;
+    border-bottom: var(--secondary-color) 3px solid;
     transition: .8s;
 }
 
@@ -93,9 +100,10 @@ header nav ul li a:hover {
     color: var(--primary-color);
 }
 
+/*  START styles for header */
 
 
-/* style the Hero */
+/* START styles for hero */
 
 .hero {
     width: 100%;
@@ -128,7 +136,23 @@ header nav ul li a:hover {
 
 }
 
-/* apply to Work section */
+/* END styles for hero */
+
+
+/* START styles for about me */
+
+.about-content img {
+    width: 175px;
+    float: left;
+    margin: 0px 20px 5px 0;
+    border: 2px solid var(--primary-color);
+}
+
+/* END styles for about me */
+
+
+/* START styles for work  */
+
 .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -170,6 +194,9 @@ header nav ul li a:hover {
     font-size: 18px;
     color: var(--primary-color);
 }
+.image-back p {
+    margin-bottom: 0;
+}
 .projects a {
     color: var(--primary-color);
     text-decoration: none;
@@ -197,9 +224,11 @@ header nav ul li a:hover {
     background-image: url("../images/nebula.jpg");
 }
 
+/* END styles for work  */
 
 
-/* contact section */
+/* START styles for contact  */
+
 .contact-info {
     display: flex;
     justify-content: space-between;
@@ -228,10 +257,14 @@ header nav ul li a:hover {
     color: var(--secondary-color);
 }
 
+/* END styles for contact  */
+
+
 /* MEDIA QUERIES */
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
+    
     /* this will be applied on any screen smaller than 980px */
     header {
         padding-bottom: 0;
@@ -314,5 +347,17 @@ header nav ul li a:hover {
     }
     .contact-info div div {
         margin-bottom: 15px;
+    }
+    .image-back::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        background: var(--tertiary-color);
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.0;
+        transition: opacity 0.6s;
     }
 }
