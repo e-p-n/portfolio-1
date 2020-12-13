@@ -305,10 +305,14 @@ header nav ul li a:hover {
 
     .projects {
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
     
     }
     .contact-info div{
         text-align: center;
 
+    }
+    .contact-info div div {
+        margin-bottom: 15px;
     }
 }
