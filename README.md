@@ -4,6 +4,7 @@
 Built a portfolio webpage with qand About Me, Work and Contact section as well as a link to my resume.
 * Created a repository on github to host the portfolio page, cloned the repository to my local machine and created a develop branch to do the work
 * Created plain HTML page with the information laid out in the appropriate order
+* The requirements call for a picture of myself, but the sample does not indicate where it should go, so I added it to the About Me section
 * Created a style.css file add design elements to the page
 * Used variables for colours
 * Added pseudo-classses to CSS file to add mouse-over effects
