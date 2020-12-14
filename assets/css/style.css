@@ -78,28 +78,30 @@ header nav {
 }
 
 header nav ul {
+    padding-top: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
     list-style: none;
 }
 
 header nav ul li a {
-    padding: 3px 8px;
-    margin: 0 5px;
-    font-weight: lighter;
-    font-size: 20px;
-    line-height: 2.0;
+    text-decoration: none;
+    padding: 8px 10px;
     color: var(--secondary-color);
-    border-bottom: var(--secondary-color) 3px solid;
-    transition: .8s;
+    margin: 0 5px;
+    background-image: linear-gradient(270deg, var(--secondary-color) 0%, var(--secondary-color) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.15em;
+    background-position: bottom;
+    transition: all 0.25s ease-in;
+    font-size: 20px;
 }
 
 header nav ul li a:hover {
-    background: var(--secondary-color);
+    background-size: 100% 100%;
     color: var(--primary-color);
-}
+  }
 
 /*  START styles for header */
 
@@ -246,17 +248,21 @@ header nav ul li a:hover {
 
 .contact-info a {
     text-decoration: none;
-    padding: 3px 8px;
-    margin: 0 5px;
+    padding: 6px 8px;
     color: var(--primary-color);
-    border-bottom: var(--primary-color) 2px solid;
-    transition: .8s;
+    margin: 0 5px;
+    background-image: linear-gradient(270deg, var(--primary-color) 0%, var(--primary-color) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.1em;
+    background-position: bottom;
+    transition: all 0.25s ease-in;
+    font-size: 16px;
 }
 
 .contact-info a:hover {
-    background: var(--primary-color);
+    background-size: 100% 100%;
     color: var(--secondary-color);
-}
+  }
 
 /* END styles for contact  */
 
