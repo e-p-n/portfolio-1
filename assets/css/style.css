@@ -161,7 +161,7 @@ header nav ul li a:hover {
 }
 .image-back {
     border: var(--tertiary-color) solid 2px;
-    min-height: 105px;
+    min-height: 125px;
     display: flex;
     align-items: flex-end;
     position: relative;
