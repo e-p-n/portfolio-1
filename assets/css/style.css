@@ -257,6 +257,7 @@ header nav ul li a:hover {
     background-position: bottom;
     transition: all 0.25s ease-in;
     font-size: 16px;
+    line-height: 2;
 }
 
 .contact-info a:hover {
