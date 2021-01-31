@@ -78,7 +78,7 @@ header nav {
 }
 
 header nav ul {
-    padding-top: 5px;
+    padding-top: 5commpx;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -211,17 +211,17 @@ header nav ul li a:hover {
 .project-1 {
     grid-column: span 2;
     grid-row: span 2;
-    background-image: url("../images/run-buddy.jpg");
+    background-image: url("../images/screen-genius.png");
 }
 .project-2 {
+     background-image: url("../images/run-buddy.jpg");
+}
+.project-3 {
     background-image: url("../images/mosaic-press.jpg");
 }
 
-.project-3 {
-    background-image: url("../images/gobsmact.jpg");
-}
 .project-4 {
-    background-image: url("../images/imaginary.jpg");
+    background-image: url("../images/gobsmact.jpg");
 }
 .project-5 {
     background-image: url("../images/nebula.jpg");
@@ -257,6 +257,7 @@ header nav ul li a:hover {
     background-position: bottom;
     transition: all 0.25s ease-in;
     font-size: 16px;
+    line-height: 2;
 }
 
 .contact-info a:hover {
