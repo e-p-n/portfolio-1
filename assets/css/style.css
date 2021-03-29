@@ -211,7 +211,7 @@ header nav ul li a:hover {
 .project-1 {
     grid-column: span 2;
     grid-row: span 2;
-    background-image: url("https://github.com/Envoy-products/Envoy-Products/blob/main/public/images/envoy-screenshot-homepage.jpg?raw=true");
+    background-image: url("../images/envoy.jpg");
 }
 .project-2 {
     background-image: url("../images/screen-genius.png");
